@@ -1,0 +1,376 @@
+.circulo-gigante {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    border-radius: 50%;
+    box-shadow: 0 8px 48px rgba(79,84,232,0.25);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    animation: pulse 2s infinite;
+}
+.img-perfil-gigante {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #222;
+}
+.img-perfil {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 16px #4F54E8;
+    border: 4px solid #fff;
+    background: #222;
+}
+.icone-chaves {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+}
+
+.circulo-chaves {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    border-radius: 50%;
+    box-shadow: 0 4px 32px rgba(79,84,232,0.25);
+    animation: pulse 2s infinite;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.chaves {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 16px #4F54E8;
+    letter-spacing: 2px;
+}
+.contato-visual a {
+    color: #f5f5f5;
+    font-weight: bold;
+    text-shadow: 0 1px 8px #4F54E8;
+    transition: color 0.3s;
+}
+.contato-visual a:hover {
+    color: #4F54E8;
+    text-decoration: underline;
+}
+/* Animações extras para ícones */
+.animacao-icone {
+    font-size: 40px;
+    color: var(--cor-primaria);
+    margin: 0 10px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+.extra-animacao {
+    color: var(--cor-secundaria);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animacao-titulo {
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+}
+.animacao-subtitulo {
+    animation: slideLeft 1s ease forwards;
+    opacity: 0;
+}
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.animacao-descricao {
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.animacao-botao {
+    margin-top: 20px;
+    text-align: left;
+}
+.btn-animado {
+    background: var(--cor-primaria);
+    color: var(--cor-texto);
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(79,84,232,0.2);
+    transition: background 0.3s, transform 0.3s;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.btn-animado:hover {
+    background: var(--cor-secundaria);
+    transform: scale(1.08);
+}
+
+.animacao-scroll {
+    text-align: center;
+    margin-top: 30px;
+    animation: bounce 2s infinite;
+}
+.animacao-scroll i {
+    font-size: 32px;
+    color: var(--cor-primaria);
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+}
+/* Base e Variáveis */
+:root {
+    --cor-fundo: #111122; 
+    --cor-primaria: #4F54E8; /* Azul Elétrico vibrante */
+    --cor-secundaria: #8e44ad; /* Roxo Neon */
+    --cor-texto: #ffffff;
+    --cor-claro: #f0f0f0;
+    --transicao: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px 10%;
+    min-height: 100vh; 
+}
+
+/* 1. Animação do Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(17, 17, 34, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--cor-texto);
+    font-weight: 500;
+    margin-left: 35px;
+    transition: var(--transicao);
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.ativo {
+    color: var(--cor-secundaria);
+}
+
+
+/* 2. Seção de Introdução (Hero) */
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 150px;
+}
+
+.info-conteudo h1 {
+    font-size: 70px;
+    opacity: 0;
+    animation: slideRight 1s ease 0.5s forwards;
+}
+
+.info-conteudo h3 {
+    font-size: 35px;
+    color: var(--cor-primaria);
+    margin: 10px 0 20px 0;
+    opacity: 0;
+    animation: slideRight 1s ease 0.8s forwards;
+}
+
+.contato-visual p {
+    margin-bottom: 5px;
+    color: #ccc;
+    opacity: 0;
+    animation: slideRight 1s ease 1s forwards;
+}
+
+/* Animação do Ícone de Ilustração */
+.info-ilustracao {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--cor-primaria);
+    border-radius: 50%;
+    box-shadow: 0 0 40px var(--cor-primaria);
+    opacity: 0;
+    animation: zoomIn 1s ease 1.2s forwards;
+}
+
+.animacao-icone {
+    font-size: 150px;
+    color: var(--cor-secundaria);
+    /* Animação de pulso no ícone */
+    animation: pulse 2s infinite alternate;
+}
+
+/* 3. Seção de Habilidades (Cards Interativos) */
+.habilidades h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.habilidades-container {
+    display: flex; /* Layout Flexbox restaurado */
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.habilidade-card {
+    background: #1e1e3f;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    cursor: default;
+    max-width: 350px; /* Largura um pouco maior que a versão densa */
+    flex: 1 1 300px;
+    opacity: 0;
+    /* Usando a variável --i (definida inline no HTML) para o delay sequencial */
+    animation: slideUp 1s ease forwards var(--i);
+}
+
+.habilidade-card:hover {
+    transform: translateY(-10px); /* Leve elevação no hover */
+    box-shadow: 0 15px 30px rgba(79, 84, 232, 0.4);
+    border-color: var(--cor-secundaria);
+}
+
+.habilidade-card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(79, 84, 232, 0.3);
+    padding-bottom: 10px;
+}
+
+.habilidade-card ul {
+    margin-left: 20px;
+    padding: 5px 0;
+}
+
+.habilidade-card p {
+    padding: 5px 0;
+}
+
+.habilidade-card .nota {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Animações Keyframes */
+@keyframes slideRight {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideTop {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 991px) {
+    .inicio {
+        flex-direction: column-reverse; 
+        text-align: center;
+        padding: 150px 5%;
+    }
+    .info-conteudo h1 { font-size: 50px; }
+    .info-conteudo h3 { font-size: 28px; }
+}
+
+@media (max-width: 768px) {
+    .habilidades-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .habilidade-card { max-width: 90%; }
+}
