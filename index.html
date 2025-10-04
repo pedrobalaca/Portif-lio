@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Balaca | Trainee em TI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">P<span>B.dev</span></a>
+        <nav class="navbar">
+            <a href="#inicio" style="--i:1;">Início</a>
+            <a href="#stats-github" style="--i:2;">Stats</a>
+            <a href="#habilidades" style="--i:3;">Habilidades</a>
+        </nav>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <div class="info-conteudo">
+            <p class="animacao-texto">Olá, eu sou</p>
+            <h1 class="animacao-titulo">Pedro Balaca</h1>
+            <h3 class="destaque animacao-subtitulo">Eu sou um <span class="texto-digitado"></span></h3>
+            
+            <p class="animacao-descricao">
+                **Entusiasta por TI**, com um grande apreço pela **Ciência** e a **Cultura Maker**. 
+                Focado em expandir conhecimentos em **Administração de Sistemas** e **Operações/Diagnóstico** para criar e otimizar soluções tecnológicas.
+            </p>
+            
+            <div class="contato-visual">
+                <a href="https://github.com/pedrobalaca" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <div class="animacao-botao">
+                <a href="#stats-github" class="btn-animado">Ver Stats</a>
+                <a href="https://github.com/pedrobalaca" target="_blank" class="btn-animado btn-secundario">GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        
+        <div class="info-ilustracao">
+            <div class="icone-perfil-dinamico">
+                <i class="fas fa-microchip"></i> </div>
+        </div>
+
+        <div class="animacao-scroll">
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </section>
+    
+    <section class="stats-github" id="stats-github">
+        <h2 class="titulo-secao">Minhas **Estatísticas** no GitHub</h2>
+        <div class="stats-container">
+            <img 
+                src="https://github-readme-stats.vercel.app/api?username=pedrobalaca&show_icons=true&theme=dark&include_all_commits=true&count_private=true&line_height=25" 
+                alt="Estatísticas do GitHub"
+                class="github-stat-card"
+            />
+        </div>
+    </section>
+
+    <section class="habilidades" id="habilidades">
+        <h2 class="titulo-secao">Competências **Técnicas**</h2>
+        <div class="habilidades-container">
+
+            <div class="habilidade-card" data-i="1">
+                <h3><i class="fas fa-server"></i> Administração de Sistemas</h3>
+                <div class="lista-habilidades">
+                    <p>Conceitos básicos de:**</p>
+                    <ul>
+                        <li>**Gerenciamento de usuários** (`useradd`, `chmod`, `chown`).</li>
+                        <li>**Serviços e Automação** (`systemctl`, agendamento de tarefas com `cron`).</li>
+                        <li>Familiaridade com a estrutura de diretórios do **Linux**.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="habilidade-card" data-i="2">
+                <h3><i class="fas fa-cogs"></i> Operações e Diagnóstico</h3>
+                <div class="lista-habilidades">
+                    <p>Experiência em:</p>
+                    <ul>
+                        <li>**Monitoramento e Análise** de recursos (`df`, `du`, `ps`, `top`).</li>
+                        <li>**Conectividade** (`ping`, `ip addr`) e Acesso remoto (**SSH**).</li>
+                        <li>Práticas de **Troubleshooting** e análise de logs.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="habilidade-card" data-i="3">
+                <h3><i class="fas fa-code"></i> Shell Script / Automação</h3>
+                <div class="lista-habilidades">
+                    <p>Familiaridade com:</p>
+                    <ul>
+                        <li>Criação de scripts para **automação de tarefas** simples.</li>
+                        <li>Uso de **condicionais** e **loops** em *Shell Script*.</li>
+                    </ul>
+                    <p class="nota">Foco em otimizar rotinas administrativas.</p>
+                </div>
+            </div>
+
+            <div class="habilidade-card idiomas-card" data-i="4">
+                <h3><i class="fas fa-language"></i> Idiomas</h3>
+                <p><strong>Português:</strong> Nativo 🇧🇷</p>
+                <p><strong>Inglês:</strong> Técnico (Leitura/Escrita Básico-Intermediário) 🇺🇸</p>
+                <p class="nota">Estudo focado em documentação técnica para TI.</p>
+            </div>
+
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-texto">
+            <p>&copy; 2025 Pedro Balaca | Trainee em TI.</p>
+        </div>
+        <div class="footer-up">
+            <a href="#inicio" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script> 
+</body>
+</html>
